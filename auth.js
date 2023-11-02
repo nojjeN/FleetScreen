@@ -16,7 +16,9 @@ function initializeMsal(id) {
         auth: {
             clientId: id,
             authority: 'https://login.microsoftonline.com/58af3eba-510e-4544-8cfd-85f5e0206382',
-            redirectUri: 'http://localhost:8080'
+            redirectUri: 'https://precious-waders-bull.cyclic.app'
+            //Uncomment when testing
+            //redirectUri: 'http://localhost:8080'
         }
     };
     msalClient = new msal.PublicClientApplication(msalConfig);

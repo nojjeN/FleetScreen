@@ -105,7 +105,7 @@ function updateProgressBar() {
     "Hunting the leak canary...",
     "Drawing a new masterpiece on the whiteboard...",
     "Welcome to gatubråkstakens paradis...",
-    "Accepting threatening fika invitations"
+    "Accepting threatening fika invitations..."
 ]
 
 var shuffledRoomStatuses = [...roomStatuses];
