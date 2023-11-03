@@ -323,7 +323,7 @@ const dateTextMap = new Map([
 function getThemeDay() {
     const now = new Date();
     const themeDayText = document.querySelector("#theme-day-div h1");
-    themeDayText.textContent = dateTextMap.get(now.getDate() + ", " + (Number)(now.getMonth()+1))
+    themeDayText.textContent = "Todays theme: " + dateTextMap.get(now.getDate() + ", " + (Number)(now.getMonth()+1))
 }
 
 getThemeDay()
