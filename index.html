@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <main id="main-container" role="main" class="container">
+  <main id="main-container" role="main" class="container" style="position: absolute; top:0; left: 0;">
     <a id="signin" onclick="displayUI(); return false;" href="#">
       <img src="./images/ms-symbollockup_signin_light.png" alt="Sign in with Microsoft" />
     </a>
@@ -24,8 +24,8 @@
       <h1></h1>
       <h2></h2>
     </div>
-    <div class="progress-bar">
-        <div class="progress-bar progress-bar-filling" id="progress-bar-filling" style="background-image: url(images/cloud.jpg)">
+    <div class="progress-bar" id="progress-bar">
+        <div class="progress-bar progress-bar-filling" id="progress-bar-filling">
             <div class="progress-bar-img" id="progress-bar-img"><img src="images/sun.png" alt=""></div>
         </div>
     </div>
@@ -36,7 +36,6 @@
             </div>
             <div class="executive_info">
                 <h2>Andreas Höglund</h2>
-                <br>
                 <h3><i>Frontline Developer</i></h3>
                 <div class="status-div" id="andreas-status">
                     <h2><i>Available</i></h2>
@@ -49,7 +48,6 @@
             </div>
             <div class="executive_info">
                 <h2>Adam Andersson</h2>
-                <br>
                 <h3><i>Backseat Developer</i></h3>
 
                 <div class="status-div" id="adam-status">
@@ -63,7 +61,6 @@
             </div>
             <div class="executive_info">
                 <h2>Philip Wingfelt</h2>
-                <br>
                 <h3><i>Offmeta Developer</i></h3>
                 <div class="status-div" id="philip-status">
                     <h2><i>Available</i></h2>
