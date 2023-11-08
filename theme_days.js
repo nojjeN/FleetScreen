@@ -327,3 +327,4 @@ function getThemeDay() {
 }
 
 getThemeDay()
+setInterval(updateProgressBar, 600000);

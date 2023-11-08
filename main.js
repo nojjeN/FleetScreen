@@ -1,5 +1,8 @@
+var currentImage;
+
 function updateProgressBar() {
-    const progressBar = document.getElementById("progress-bar-filling");
+    const progressBar = document.getElementById("progress-bar");
+    const progressBarFilling = document.getElementById("progress-bar-filling");
     const progressBarImg = document.getElementById("progress-bar-img");
     const now = new Date();
     const startTime = new Date();
@@ -12,28 +15,36 @@ function updateProgressBar() {
     lunchStart.setHours(12, 0, 0); // 12:30
     const lunchEnd = new Date();
     lunchEnd.setHours(13, 0, 0); // 12:30
+
   
     const totalMilliseconds = endTime - startTime;
     const elapsedMilliseconds = now - startTime;
     const percentage = (elapsedMilliseconds / totalMilliseconds);
   
-  
+    var newImage;
+
     if (now.getDay() == 4 && now >= padelStart && now <= lunchEnd) {
-        progressBarImg.querySelector("img").src = "images/ball.png";
+      newImage = "images/ball.png";
     } else if (now >= lunchStart && now <= lunchEnd) {
-      progressBarImg.querySelector("img").src = "images/banana.png";
+      newImage = "images/banana.png";
     } else if (now < lunchStart) {
-      progressBarImg.querySelector("img").src = "images/sun.png";
+      newImage = "images/sun.png";
     } else {
-      progressBarImg.querySelector("img").src = "images/moon.png";
+      newImage = "images/moon.png";
     }
+
+    if(newImage !== currentImage) {
+      currentImage = newImage
+      progressBarImg.querySelector("img").src = newImage;
+    }
+
   
     // Adjust the left position of the image to align it with the end of the progress bar
     if(percentage <= 100 && now > startTime) {
-      progressBar.style.width = percentage*100 + "%";
-      progressBarImg.style.left = (percentage)*1100-45+"px";
+      progressBarFilling.style.width = percentage*100 + "%";
+      progressBarImg.style.left = percentage*progressBar.offsetWidth-45+"px";
     } else {
-      progressBar.style.width = 0 + "%";
+      progressBarFilling.style.width = 0 + "%";
       progressBarImg.style.left = "-45px";
     }
   }
@@ -105,7 +116,9 @@ function updateProgressBar() {
     "Hunting the leak canary...",
     "Drawing a new masterpiece on the whiteboard...",
     "Welcome to gatubråkstakens paradis...",
-    "Accepting threatening fika invitations..."
+    "Accepting threatening fika invitations...",
+    "Link launching our lunch boxes...",
+    "Microdosing Andreas homebrewn coffee in secret..."
 ]
 
 var shuffledRoomStatuses = [...roomStatuses];
@@ -125,7 +138,6 @@ function selectAndDisplayRandomRoomStatus() {
 }
 
 function getNextSentence() {
-  console.log(shuffledRoomStatuses.length)
   if(shuffledRoomStatuses.length == 0) {
     shuffledRoomStatuses = [...roomStatuses];
     shuffleArray(shuffledRoomStatuses);
@@ -133,32 +145,12 @@ function getNextSentence() {
   return shuffledRoomStatuses.pop();
 }
 
-
-// Initial call to set the progress bar and image on page load
 updateProgressBar();
-
-// Update the progress bar and image every 5 seconds
-setInterval(updateProgressBar, 3000);
+setInterval(updateProgressBar, 5000);
 
 
 selectAndDisplayRandomRoomStatus();
-setInterval(selectAndDisplayRandomRoomStatus, 3000);
-
-
-let animationInterval;
-const h2Element = document.getElementById("animatedH2");
-const fontSizes = ["32px", "36px"]; // Array of font sizes to loop through
-let currentFontSizeIndex = 0;
-
-function startAnimation() {
-    animationInterval = setInterval(animateFontSize, 1200); // Change font size every 1 second (adjust as needed)
-}
-
-function animateFontSize() {
-    const themeDayText = document.querySelector("#room-status-div h1");
-    themeDayText.style.fontSize = fontSizes[currentFontSizeIndex];
-    currentFontSizeIndex = (currentFontSizeIndex + 1) % fontSizes.length;
-}
+setInterval(selectAndDisplayRandomRoomStatus, 12000);
 
 startAnimation();
 
