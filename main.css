@@ -33,7 +33,7 @@ body {
 }
 
 .theme-day-div {
-    width: 0 auto;
+    width: auto;
     margin: 0 auto;
     margin-top: 50px;
     color: white;
