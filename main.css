@@ -40,10 +40,27 @@ body {
     height: 900px;
 }
 
-.theme-day-div {
+.name-day-div {
     width: auto;
     margin: 0 auto;
     margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.name-day-div h1 {
+    font-size: 2.2em;
+    font-family: 'Arial';
+}
+.name-day-div h2 {
+    font-size: 1.2em;
+    font-family: 'Arial';
+}
+
+.theme-day-div {
+    width: auto;
+    margin: 0 auto;
+    margin-top: auto;
     color: white;
     text-align: center;
 }
@@ -243,6 +260,12 @@ body {
     .status-div h2 {
       font-size: 1.35em;
        line-height: 40px;
+    }
+    .name-day-div {
+        margin-top: 30px;
+    }
+    .name-day-div h1 {
+        font-size: 2.2em;
     }
     .theme-day-div {
         margin-top: 30px;
