@@ -153,6 +153,21 @@ function getNextSentence() {
   return shuffledRoomStatuses.pop();
 }
 
+function switchDivs() {
+  var nameDayDiv = document.getElementById("name-day-div");
+  var themeDayDiv = document.getElementById("theme-day-div");
+
+  if (nameDayDiv.style.display === "block") {
+    nameDayDiv.style.display = "none";
+    themeDayDiv.style.display = "block";
+  } else {
+    nameDayDiv.style.display = "block";
+    themeDayDiv.style.display = "none";
+  }
+}
+
+setInterval(switchDivs, 15000);
+
 updateProgressBar();
 setInterval(updateProgressBar, 5000);
 
@@ -162,4 +177,3 @@ setInterval(selectAndDisplayRandomRoomStatus, 12000);
 
 startAnimation();
 
-  
