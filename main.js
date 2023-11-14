@@ -89,7 +89,7 @@ function updateProgressBar() {
     "Äntligen är det snart fredag!",
     "Asking Lassing about the hoodies...",
     "Installing clothing pins in the celing…",
-    "Praying for Wolgfang…",
+    "Praying for Wolfgang…",
     "Smasking in each others ears…",
     "Swimming in padel balls…",
     "Admiring Adam's alternating accordion ambition…",
@@ -118,7 +118,15 @@ function updateProgressBar() {
     "Welcome to gatubråkstakens paradis...",
     "Accepting threatening fika invitations...",
     "Link launching our lunch boxes...",
-    "Microdosing Andreas homebrewn coffee in secret..."
+    "Microdosing Andreas homebrewn coffee in secret...",
+    "Adjusting the 100 meter lightsling...",
+    "Giving back Rubiks his cubes...",
+    "Dodging all possible Rubiks cube solutions...",
+    "Applying cube lube...",
+    "Forcing Julmust upon Adam's existence...",
+    "Applying aspartame...",
+    "Acknowledging Andreas absolutely abnormal aspartame aspirations...",
+    "Phosphorylating Philip's phishing photos"
 ]
 
 var shuffledRoomStatuses = [...roomStatuses];
@@ -133,8 +141,8 @@ function shuffleArray(array) {
 }
 
 function selectAndDisplayRandomRoomStatus() {
-    const themeDayText = document.querySelector("#room-status-div h1");
-    themeDayText.textContent = getNextSentence();
+    const roomStatusText = document.querySelector("#room-status-div h1");
+    roomStatusText.textContent = getNextSentence();
 }
 
 function getNextSentence() {
@@ -145,13 +153,28 @@ function getNextSentence() {
   return shuffledRoomStatuses.pop();
 }
 
+
+(function() {
+  var nameDayDiv = document.getElementById("name-day-div");
+  var themeDayDiv = document.getElementById("theme-day-div");
+  function switchDivs() {
+      if (nameDayDiv.style.display === "block") {
+          nameDayDiv.style.display = "none";
+          themeDayDiv.style.display = "block";
+      } else {
+          nameDayDiv.style.display = "block";
+          themeDayDiv.style.display = "none";
+      }
+  }
+  switchDivs();
+  setInterval(switchDivs, 15000); 
+})();
+
 updateProgressBar();
 setInterval(updateProgressBar, 5000);
-
 
 selectAndDisplayRandomRoomStatus();
 setInterval(selectAndDisplayRandomRoomStatus, 12000);
 
 startAnimation();
 
-  
