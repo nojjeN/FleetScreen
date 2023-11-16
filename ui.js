@@ -16,20 +16,18 @@ async function displayUI() {
 }
 
 async function fetchEvents() {
-    console.log("Fetching events")
-
     philipEvents = await getEvents("philip.wingfelt@afry.com");
     adamEvents = await getEvents("adam.andersson@afry.com");
     andreasEvents = await getEvents("andreas.a.hoglund@afry.com");
+
+    download_calendars(philipEvents.value, adamEvents.value, andreasEvents.value)
     updateEvents();
 }
 
 function updateEvents() {
-    console.log("Updating events")
-
-    setCurrentStatus(philipEvents, "philip-status")
-    setCurrentStatus(adamEvents, "adam-status")
-    setCurrentStatus(andreasEvents, "andreas-status")
+    setCurrentStatus(philipEvents.value, "philip-status")
+    setCurrentStatus(adamEvents.value, "adam-status")
+    setCurrentStatus(andreasEvents.value, "andreas-status")
 }
 
 function setCurrentStatus(events, id) {
@@ -59,7 +57,7 @@ function setCurrentStatus(events, id) {
 }
 
 function getCurrentStatus(events) {
-    for (const event of events.value) {
+    for (const event of events) {
         const utcStartDate = new Date(event.start.dateTime);
         const utcEndDate = new Date(event.end.dateTime);
 

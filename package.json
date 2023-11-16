@@ -13,5 +13,10 @@
     "url": "git+https://github.com/nojjeN/FleetScreen.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1489.0",
+    "axios": "^1.6.0",
+    "fs": "^0.0.1-security"
+  }
 }

@@ -35,6 +35,12 @@ body {
     transition: font-size 1s; /* 1s is the duration of the transition */
 }
 
+.container {
+    position: absolute; 
+    top:0; 
+    left: 0;
+}
+
 
 .screen-content {
     height: 900px;
@@ -202,6 +208,9 @@ body {
 }
 
 @media only screen and (max-width: 1300px) {
+    .container {
+        visibility: hidden;
+    }
     .images-container {
         width: 900px;
         margin-top: 40px;
