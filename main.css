@@ -41,36 +41,40 @@ body {
     left: 0;
 }
 
-
 .screen-content {
     height: 900px;
 }
 
-.theme-day-div {
-    width: 600px;
+.name-day-div, .theme-day-div {
+    height: 100px;
+    width: auto;
     margin: 0 auto;
     margin-top: 50px;
     color: white;
     text-align: center;
-}
+  }
 
-.theme-day-div h1 {
+.name-day-div h1, .theme-day-div h1 {
     font-size: 3em;
+}
+.name-day-div h2, .theme-day-div h2 {
+    margin-top: 10px;
+    font-size: 2em;
     font-family: 'Handlee', cursive;
-
 }
 
 .room-status-div {
     width: 1000px;
-    margin-top: 55px;
+    margin: 55px auto 0;
+    text-align: center;
     color: rgb(228, 200, 40);
     transition: transform 0.3s ease-out;
     animation: scaleAnimation 1.3s infinite alternate;
 }
 
+
 .room-status-div h1 {
     font-size: 32px;
-
 }
 
 .progress-bar {
@@ -246,6 +250,12 @@ body {
     .status-div h2 {
       font-size: 1.35em;
        line-height: 40px;
+    }
+    .name-day-div {
+        margin-top: 30px;
+    }
+    .name-day-div h1 {
+        font-size: 2.2em;
     }
     .theme-day-div {
         margin-top: 30px;
