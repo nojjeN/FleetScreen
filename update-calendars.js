@@ -2,28 +2,6 @@ function updateCalendars() { jsonString = [
   [
     {
       "start": {
-        "dateTime": "2023-11-23T12:00:00.0000000",
-        "timeZone": "UTC"
-      },
-      "end": {
-        "dateTime": "2023-11-23T14:00:00.0000000",
-        "timeZone": "UTC"
-      },
-      "showAs": "tentative"
-    },
-    {
-      "start": {
-        "dateTime": "2023-11-23T13:30:00.0000000",
-        "timeZone": "UTC"
-      },
-      "end": {
-        "dateTime": "2023-11-23T14:00:00.0000000",
-        "timeZone": "UTC"
-      },
-      "showAs": "busy"
-    },
-    {
-      "start": {
         "dateTime": "2023-11-24T08:15:00.0000000",
         "timeZone": "UTC"
       },
@@ -106,6 +84,28 @@ function updateCalendars() { jsonString = [
       },
       "end": {
         "dateTime": "2023-11-28T11:00:00.0000000",
+        "timeZone": "UTC"
+      },
+      "showAs": "busy"
+    },
+    {
+      "start": {
+        "dateTime": "2023-11-28T11:00:00.0000000",
+        "timeZone": "UTC"
+      },
+      "end": {
+        "dateTime": "2023-11-28T12:00:00.0000000",
+        "timeZone": "UTC"
+      },
+      "showAs": "tentative"
+    },
+    {
+      "start": {
+        "dateTime": "2023-11-29T08:15:00.0000000",
+        "timeZone": "UTC"
+      },
+      "end": {
+        "dateTime": "2023-11-29T08:30:00.0000000",
         "timeZone": "UTC"
       },
       "showAs": "busy"
