@@ -3,6 +3,15 @@ var philipEvents;
 var adamEvents;
 var andreasEvents;
 
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+if(id != null) {
+    initializeMsal(id)
+    displayUI()
+}
+
 async function displayUI() {    
     await signIn();
     var signInButton = document.getElementById('signin');
