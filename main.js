@@ -153,12 +153,20 @@ function getNextSentence() {
   return shuffledRoomStatuses.pop();
 }
 
+function reloadPage() {
+  location.reload(true); 
+}
+
+setTimeout(reloadPage, 15 * 60 * 1000);
+
 
 (function() {
   var nameDayDiv = document.getElementById("name-day-div");
   var themeDayDiv = document.getElementById("theme-day-div");
   function switchDivs() {
       if (nameDayDiv.style.display === "block") {
+          triggerAnimation("theme-day-div")
+          triggerAnimation("name-day-div")
           nameDayDiv.style.display = "none";
           themeDayDiv.style.display = "block";
       } else {
@@ -169,6 +177,11 @@ function getNextSentence() {
   switchDivs();
   setInterval(switchDivs, 15000); 
 })();
+
+function triggerAnimation(id) {
+  var animatedDiv = document.getElementById(id);
+  animatedDiv.classList.add("shrink-and-grow");
+}
 
 updateProgressBar();
 setInterval(updateProgressBar, 5000);

@@ -30,6 +30,19 @@ body {
     }
   }
 
+  @keyframes shrinkAndGrowAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .shrink-and-grow {
+    animation: shrinkAndGrowAnimation 2s alternate;
+  }
+
 #animatedH2 {
     font-size: 24px;
     transition: font-size 1s; /* 1s is the duration of the transition */
@@ -56,6 +69,7 @@ body {
 
 .name-day-div h1, .theme-day-div h1 {
     font-size: 3em;
+    font-family: 'Handlee', cursive;
 }
 .name-day-div h2, .theme-day-div h2 {
     margin-top: 10px;
@@ -75,6 +89,7 @@ body {
 
 .room-status-div h1 {
     font-size: 32px;
+    font-family: 'Handlee', cursive;
 }
 
 .progress-bar {
