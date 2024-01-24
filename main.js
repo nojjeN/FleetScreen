@@ -157,7 +157,7 @@ function reloadPage() {
   location.reload(true); 
 }
 
-setTimeout(reloadPage, 15 * 60 * 1000);
+setTimeout(reloadPage, 60 * 60 * 24 * 1000);
 
 
 (function() {
