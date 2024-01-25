@@ -3,7 +3,8 @@ body {
     margin: 0 auto !important;
     float: none !important;
     background-color: #333333;*/
-    background-image: url('images/snowy.png'); 
+    background-image: url('images/alley.png'); 
+    background-size: cover;
 
     width: 100%; 
     height: 100%;
@@ -94,6 +95,10 @@ body {
 .room-status-div h1 {
     font-size: 32px;
     font-family: 'Handlee', cursive;
+    text-shadow: -1px -1px 0 black,  
+    1px -1px 0 black,
+   -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 .progress-bar {
